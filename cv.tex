@@ -1,0 +1,173 @@
+\documentclass[12pt,a4paper]{moderncv}
+\moderncvtheme[blue]{classic} % banking casual classic oldstyle 
+\usepackage[utf8]{inputenc}
+\usepackage[inline]{enumitem}
+\usepackage{eurosym}
+% Marge aux 4 coins de la page, ici elles sont réduites pour gagner de la place
+\usepackage[top=1.0cm, bottom=1.0cm, left=1.6cm, right=1.6cm]{geometry}
+% Largeur de la colonne de gauche pour les dates
+\setlength{\hintscolumnwidth}{2.7cm}
+\firstname{Jean-Louis}
+\familyname{Dufour}
+\title{Développeur de logiciel critique \ldots}
+\address{}{78420 Carrières sur Seine}
+\email{jeanlouis.dufour7@gmail.com}
+\homepage{jeanlouisdufour.github.io}
+%\mobile{06 00 00 00 00}
+%\extrainfo{\link[LinkedIn]{http://www.linkedin.com/in/jean-louis-dufour-9ba1881a8}} %\href{www.linkedin.com/in/jean-louis-dufour-9ba1881a8}}
+\extrainfo{\social[linkedin]{jean-louis-dufour-9ba1881a8}}
+\photo[80pt][0pt]{JLD_cool.JPG} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\social[linkedin]{jean-louis-dufour-9ba1881a8}
+
+\begin{document}
+\maketitle
+% Marge négative entre le titre et la partie expérience, pour gagner de la place
+\vspace*{-2.5\baselineskip}
+
+\rule{1.0\linewidth}{1pt}
+
+\ldots au sens large : mon dernier développement date de 2014 (librairie Simulink DAL A), depuis je continue à y contribuer via la R\&T et des audits, expertises et coups de main ponctuels.
+
+Le point original de mon parcours est son équilibre entre conception et Sûreté de Fonctionnement.
+
+\rule{1.0\linewidth}{1pt}
+
+
+\section{Expériences}
+
+\cventry{2014\\à Aujourd'hui}{Expert logiciel}{Safran Electronics \& Defense}{Eragny sur Oise}{}{
+\begin{itemize}%
+\item Architecte de l'environnement de développement des logiciels critiques (GCONF, ALM, architecture [Capella-like], MBD [Scade et Simulink] et test).
+\item Création et prototypage du concept de MBD "unifié" : il s'agit de l'intersection de Simulink et Scade (2 papiers à ERTS).
+\item Collaboration avec MathWorks sur certains aspects certif de Code Inspector.
+\item Définition d'un simulateur distribué basé ROS, intégrant un simulateur de vol (Presagis).
+\item CVE sur un développement de drône (FRA 21 part J).
+\end{itemize}
+}
+
+\cventry{2008 -- 2014}{Responsable métier systèmes de navigation}{Sagem Défense \& Sécurité}{Eragny sur Oise}{}{
+\begin{itemize}%
+\item Premier poste sur une centrale inertielle à double certification (DO178B pour la partie civile) : développement (DAL A) de son séquenceur de tâches préemptif et partitionnant (voir publi et brevet).
+\item Puis responsable métier Système sur deux centrales inertielles (avion et hélico).
+\item Enfin, Initiateur du projet "coeur NAV" de centrale de navigation générique (basé sur Simulink).
+\end{itemize}
+}
+
+\cventry{2003 -- 2008}{Responsable métier Architecture EE, puis SdF EE}{Groupe PSA}{La Garenne-Colombes}{}{
+\begin{itemize}%
+\item Service d'architecture EE de la division "sous-capot" DPMO (moteurs-boîtes et liaison au sol) : essentiellement le bus CAN, distribution/protection électrique et début d'Autosar sur la fin.
+\item Puis création du service SdF EE et 'maître expert' SdF. Grosse activité avec nos fournisseurs sur les "safety concept" des calculateurs. Avec Nicolas Becker (SdF Vélizy), démarrage de la normalisation ISO 26262.
+\end{itemize}
+}
+
+\cventry{1999 -- 2003}{Consultant senior}{Ligeron S.A.}{Gif-sur-Yvette}{}{
+\begin{itemize}%
+\item Première année chez Sagem Automotive sur les contrôles moteurs pour Renault.
+\item Puis 3 ans très ferroviaires, en particulier pour Alstom St Ouen (où Fernando Mejia a complété ma connaissance de B) sur un système de limitation de vitesse (ligne Boston-NY-Philadelphie d'Amtrak) : développement avec la méthode "B" de l'applicatif critique et analyse de robustesse de l'électronique de vote de la plate-forme critique "2 parmi 3".
+\end{itemize}
+}
+
+\cventry{1992 -- 1999}{Ingénieur SdF et Electronique}{Matra Transport}{Montrouge}{}{
+%\begin{itemize}%
+Essentiellement sur METEOR (ligne 14 Parisienne).
+Première moitié SdF, ensuite conception ASIC-FPGA, mais les deux essentiellement sur le même sujet : le Processeur Codé. Sauf la première année consacrée aussi à la méthode B.
+%\end{itemize}
+}
+
+
+\section{Formations}
+
+\cventry{2015}{Architecte Système}{CESAMES}{Paris}{}{
+Spécialité Administration et Sécurité des Réseaux
+}
+
+
+\cventry{1989 -- 1992}{Préparation de thèse}{INRIA}{Rocquencourt}{}{
+Spécialité Administration et Sécurité des Réseaux
+}
+
+\cventry{1986 -- 1989}{Ingénieur}{Polytechnique}{Palaiseau}{}{
+Spécialité systèmes embarqués. Formation orienté Linux\texttt{/}Debian et programmation C
+}
+
+\cventry{1983 -- 1986}{Classes préparatoires}{Louis-Le-Grand}{Paris}{}{
+Spécialité systèmes embarqués. Formation orienté Linux\texttt{/}Debian et programmation C
+}
+
+\section{Publications}
+
+\cventry{2018}{Statecharts for Unified Model-Based Design – As simple as possible, as rich as needed}
+{\href{https://www.erts2018.org/uploads/program/ERTS_2018_paper_32.pdf}{ERTS}}{}{}{
+\ldots
+we present the control-flow part, which is much more restrictive, because the automata paradigms of Scade and Simulink differ fundamentally.
+\ldots
+}
+
+\cventry{2016}{The Unified Model-Based Design: how not to choose between Scade and Simulink}
+{\href{https://hal.archives-ouvertes.fr/hal-01289662/document}{ERTS}}{}{}{
+Software projects using Simulink or Scade use in fact a subset of Simulink or Scade. The ‘alignment’ of these two subsets gives rise to a new concept, the ‘Unified MBD’
+\ldots
+}
+
+\cventry{2014}{B Extended to Floating Point Numbers: Is it Sufficient for Proving Avionics Software ?}
+{ch. 13 in \href{https://onlinelibrary.wiley.com/doi/book/10.1002/9781119002727}{Formal Methods Applied to Complex Systems: Implementation of the B Method} (ed. J.-L. Boulanger, Wiley)}{}{}{
+\ldots
+Six potential stumbling blocks have been identified, and the complexity of floating‐point numbers in relation to real numbers or integers is far from the most serious of these: the complexity of specifications and algorithms is the difficulty that we really need to bear in mind.
+\ldots
+}
+
+\cventry{2014}{Compositional certification: the CERCLES2 project}
+{\href{https://www.see.asso.fr/file/13256/download/21932}{ERTS}, \href{https://hal.archives-ouvertes.fr/hal-00997676/document}{13th AFADL}}{}{}{
+\ldots
+Of course this vertuous combination of “lesser introduction / better detection” of bugs is not guaranteed simply by the graphical and data-flow paradigms
+\ldots
+}
+
+\cventry{2012}{The B method takes up floating-point numbers}
+{\href{https://web1.see.asso.fr/erts2012/Site/0P2RUC89/5C-2.pdf}{ERTS}}{}{}{
+\ldots
+the B method, which has been the first formal method to prove real-size software, will soon be able to prove the correctness of floating-point computations.
+\ldots
+}
+
+\cventry{2011}{PROCEDE DE SEQUENCEMENT DETERMINISTE MULTITACHE}
+{\href{https://bases-brevets.inpi.fr/fr/document/FR2956913.html}{brevet, déposé en 2009, ayant permis la publication qui suit}}{}{}{}
+\cventry{2010}{Deterministic scheduling reconciles cache memory with WCET}
+{\href{https://web1.see.asso.fr/erts2010/Site/0ANDGY78/Fichier/PAPIERS ERTS 2010 2/ERTS2010_0119_final.pdf}{ERTS}}{}{}{
+\ldots
+The difficulty comes in adequately bounding the cache refill cost due to context switches. This paper presents the solution
+\ldots
+}
+
+\cventry{2005}{Automotive safety concepts : 10-9/h for less than 100\euro{} piece}
+{\href{http://download.faszination-leichtbau.de/Proceedings_Volume_II_AAET2005.pdf}{6th AAET conference}}{}{}{
+Safety-critical functions are now common in ours cars \ldots
+These functions are no more reserved to high-end vehicles and this should amaze Railway and Avionics engineers, who are used to "pay" for safety \ldots
+}
+
+\cventry{1996}{Safety computations in integrated circuits}
+{\href{https://jeanlouisdufour.github.io/96_VTS.pdf}{14th IEEE VLSI Test Symposium (VTS'96)}}{}{}{
+\ldots
+MATRA TRANSPORT has developed at the beginning of the eighties an "informational redundancy" technique associating arithmetic coding and signature checking
+\ldots
+}
+
+
+
+\section{Enseignement}
+
+\cventry{2002\\à Aujourd'hui}{\href{https://jeanlouisdufour.github.io/Conception_des_systemes_surs.pdf}{Conception sûre des systèmes critiques}}
+{}{}{}{
+aujourd'hui à l'X [COMASIC] et Centrale-Supélec [MIS]
+}
+
+%\cvdoubleitem{\underline{OS}}{Centos 6\texttt{/}7, Debian, CloudLinux}{\underline{Virtualisation}}{Proxmox, OpenVZ}
+
+%\cvitem{\underline{Programmation}}{HTML, CSS, Javascript, PHP, SQL, Bash, C, Silex, Symfony (3\texttt{/}4), Bootstrap (3)}
+
+
+
+%\cvlanguage{\underline{Anglais}}{lu, écrit, parlé -- Toeic 965 \texttt{/} 990}{}
+
+
+\end{document}
